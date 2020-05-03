@@ -34,7 +34,7 @@ CSS CUSTOM PROPS / VARIABLES
     --white: #F7F7F7;
 
     --ff: 'madrasBoldItalic';
-    --ff-size: '2.2em';
+    --ff-size: 4.2em;
     --ff-ss: 'MadrasExtraLight';
     --ff-ss-size: 1.2em;
 }
@@ -46,7 +46,13 @@ ALL
 * {
 	margin: 0;
     padding: 0;
+}
 
+/*--------------------------------------------------
+BODY
+--------------------------------------------------*/
+
+body {
     background-color: var(--black);
 }
 
@@ -65,7 +71,7 @@ h1 {
     font-family: madrasBoldItalic;
     font-size: var(--ff-size);
 
-    color: var(--black);
+    color: var(--white);
 }
 
 /*--------------------------------------------------
@@ -83,6 +89,14 @@ SVG
     fill: var(--gold);
 }
 
+.avedalogo {
+    width: 50%;
+}
+
+.avedalogo .a {
+    fill: var(--gold);
+}
+
 /*--------------------------------------------------
 GRID
 --------------------------------------------------*/
@@ -95,7 +109,7 @@ GRID
 	grid-gap: 0px;
 
     grid-template-columns: auto 700px auto;
-    grid-template-rows: 300px auto 12px 30px;
+    grid-template-rows: 300px 300px auto 30px;
 
 	grid-template-areas:
 		". a ."
@@ -125,8 +139,6 @@ DIV
     justify-content: center;
     align-items: center;
 
-    height: 25vw;
-
     border-bottom: var(--white) solid 0.5px;
 
 	grid-area: b
@@ -137,9 +149,27 @@ DIV
     justify-content: center;
     align-items: center;
 
+    height: 300px;
+    width: 100%;
+
     border-bottom: var(--white) solid 0.5px;
 
 	grid-area: c
+}
+
+.background-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+
+    padding-top: 50px;
+
+    background-image: url(./img/anna-demianenko-12397-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position-y: -50px;
 }
 
 .d {
