@@ -32,9 +32,11 @@ CSS CUSTOM PROPS / VARIABLES
     --gold: #DAA520;
     --black: #18181A;
     --white: #F7F7F7;
+    
+    --alarm: #da4820;
 
     --ff: 'madrasBoldItalic';
-    --ff-size: 4.2em;
+    --ff-size: 1.6rem;
     --ff-ss: 'MadrasExtraLight';
     --ff-ss-size: 1.2em;
 }
@@ -70,6 +72,7 @@ p {
 h1 {
     font-family: madrasBoldItalic;
     font-size: var(--ff-size);
+    letter-spacing: 0.472em;
 
     color: var(--white);
 }
@@ -116,6 +119,18 @@ GRID
 		". b ."
         ". c ."
         ". d .";
+}
+/*--------------------------------------------------
+HEADER SPAN
+--------------------------------------------------*/
+
+.header-span {
+    background-color: var(--alarm);
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
 }
 
 /*--------------------------------------------------
