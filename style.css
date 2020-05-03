@@ -1,0 +1,153 @@
+/* Boilerplate 2020 by Oliver Peter 🐕
+
+    - IMPORTS
+    - CSS CUSTOM PROPS / VARIABLES
+    - ALL
+    - HTML, BODY
+    - GRID
+    - VARIABLES
+    - DIV
+    
+This CSS kills Faschists 🖖🏻 */
+
+/*--------------------------------------------------
+IMPORTS
+--------------------------------------------------*/
+
+@font-face {
+    font-family: madraslight;
+    src: url("fonts/MadrasExtraLight.otf") format("opentype");
+}
+
+@font-face {
+    font-family: madrasBoldItalic;
+    src: url("fonts/MadrasExtraBoldItalic.otf") format("opentype");
+}
+
+/*--------------------------------------------------
+CSS CUSTOM PROPS / VARIABLES
+--------------------------------------------------*/
+
+:root {
+    --gold: #DAA520;
+    --black: #18181A;
+    --white: #F7F7F7;
+
+    --ff: 'madrasBoldItalic';
+    --ff-size: '2.2em';
+    --ff-ss: 'MadrasExtraLight';
+    --ff-ss-size: 1.2em;
+}
+
+/*--------------------------------------------------
+ALL
+--------------------------------------------------*/
+
+* {
+	margin: 0;
+    padding: 0;
+
+    background-color: var(--black);
+}
+
+/*--------------------------------------------------
+P, H1, H2, H3, H4, H5, H6
+--------------------------------------------------*/
+p {
+    font-family: madraslight;
+    font-size: var(--ff-ss-size);
+    letter-spacing: 0.1em;
+
+    color: var(--white);
+}
+
+h1 {
+    font-family: madrasBoldItalic;
+    font-size: var(--ff-size);
+
+    color: var(--black);
+}
+
+/*--------------------------------------------------
+IMG
+--------------------------------------------------*/
+
+/*--------------------------------------------------
+SVG
+--------------------------------------------------*/
+.gingerlogo {
+    width: 40%;
+}
+
+.gingerlogo .a {
+    fill: var(--gold);
+}
+
+/*--------------------------------------------------
+GRID
+--------------------------------------------------*/
+
+.container {
+    width: 100vw;
+	height: 100vh;
+
+	display: grid;
+	grid-gap: 0px;
+
+    grid-template-columns: auto 700px auto;
+    grid-template-rows: 300px auto 12px 30px;
+
+	grid-template-areas:
+		". a ."
+		". b ."
+        ". c ."
+        ". d .";
+}
+
+/*--------------------------------------------------
+DIV
+--------------------------------------------------*/
+
+.a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 50px;
+
+    border-bottom: var(--white) solid 0.5px;
+
+	grid-area: a
+}
+
+.b {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 25vw;
+
+    border-bottom: var(--white) solid 0.5px;
+
+	grid-area: b
+}
+
+.c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-bottom: var(--white) solid 0.5px;
+
+	grid-area: c
+}
+
+.d {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-bottom: var(--white) solid 0.5px;
+
+	grid-area: d
+}
