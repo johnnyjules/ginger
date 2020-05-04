@@ -112,7 +112,7 @@ GRID
 	grid-gap: 0px;
 
     grid-template-columns: auto 700px auto;
-    grid-template-rows: 300px 300px auto 30px;
+    grid-template-rows: 300px 300px 400px 80px;
 
 	grid-template-areas:
 		". a ."
@@ -164,7 +164,9 @@ DIV
     justify-content: center;
     align-items: center;
 
-    height: 300px;
+    /* border: solid 1px red; */
+
+    height: 390px;
     width: 100%;
 
     border-bottom: var(--white) solid 0.5px;
@@ -176,15 +178,22 @@ DIV
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;
+    height: 300px;
     width: 100%;
-
-    padding-top: 50px;
 
     background-image: url(./img/anna-demianenko-12397-unsplash.jpg);
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position-y: -50px;
+    background-attachment: fixed,;
+    background-repeat: no-repeat, repeat-y;
+
+
+    /* PARALAX */
+    /* background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
 }
 
 .d {
@@ -192,7 +201,27 @@ DIV
     justify-content: center;
     align-items: center;
 
-    border-bottom: var(--white) solid 0.5px;
+    height: 390px;
+    width: 100%;
+    /* justify-content: center;
+    align-items: center; */
+
+    /* border-bottom: var(--white) solid 0.5px; */
 
 	grid-area: d
+}
+
+.contact-container {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: stretch;
+
+    height: 300px;
+    width: 100%;
+
+    border: 1px solid red;
+}
+
+.contactbox {
+    border: green solid 1px;
 }
