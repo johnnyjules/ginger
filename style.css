@@ -2,8 +2,12 @@
 
     - IMPORTS
     - CSS CUSTOM PROPS / VARIABLES
+    - CLOSE
     - ALL
     - HTML, BODY
+    - P, H1, H2, H3, H4, H5, H6
+    - IMG
+    - SVG
     - GRID
     - VARIABLES
     - DIV
@@ -29,17 +33,42 @@ CSS CUSTOM PROPS / VARIABLES
 --------------------------------------------------*/
 
 :root {
+
     --gold: #DAA520;
     --black: #18181A;
     --white: #F7F7F7;
     
     --alarm: #da4820;
 
+    /* H1 */
     --ff: 'madrasBoldItalic';
     --ff-size: 1.6rem;
+
+    /* H2 */
+    --ff-ss: 'madrasBoldItalic';
+    --ff-size-h2: 1.1rem;
+
+    /* P */
     --ff-ss: 'MadrasExtraLight';
     --ff-ss-size: 1.2em;
 }
+
+/*--------------------------------------------------
+CLOSE
+--------------------------------------------------*/
+
+.close {
+    cursor: pointer;
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    /* padding: 12px 16px;
+    transform: translate(0%, 0%); */
+  }
+  
+.close:hover {
+      
+    }
 
 /*--------------------------------------------------
 ALL
@@ -77,6 +106,22 @@ h1 {
     color: var(--white);
 }
 
+h2 {
+    font-family: madrasBoldItalic;
+    font-size: var(--ff-size-h2);
+    letter-spacing: 0.29em;
+
+    color: var(--white);
+}
+
+h3 {
+    font-family: madrasBoldItalic;
+    font-size: var(--ff-size);
+    letter-spacing: 0.472em;
+
+    color: var(--white);
+}
+
 /*--------------------------------------------------
 IMG
 --------------------------------------------------*/
@@ -85,7 +130,7 @@ IMG
 SVG
 --------------------------------------------------*/
 .gingerlogo {
-    width: 40%;
+    width: 22%;
 }
 
 .gingerlogo .a {
@@ -100,6 +145,14 @@ SVG
     fill: var(--gold);
 }
 
+.invosvg {
+    width: 50px;
+    
+    fill: var(--gold);
+
+    padding-bottom: 1em;
+}
+
 /*--------------------------------------------------
 GRID
 --------------------------------------------------*/
@@ -112,11 +165,12 @@ GRID
 	grid-gap: 0px;
 
     grid-template-columns: auto 700px auto;
-    grid-template-rows: 300px 300px 400px 80px;
+    grid-template-rows: auto auto auto auto auto;
 
 	grid-template-areas:
-		". a ."
-		". b ."
+		". a ." /*LOGO*/    
+        ". b ."     
+        ". e ."
         ". c ."
         ". d .";
 }
@@ -139,10 +193,11 @@ DIV
 
 .a {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     
-    padding: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 
     border-bottom: var(--white) solid 0.5px;
 
@@ -153,6 +208,9 @@ DIV
     display: flex;
     justify-content: center;
     align-items: center;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
 
     border-bottom: var(--white) solid 0.5px;
 
@@ -166,8 +224,8 @@ DIV
 
     /* border: solid 1px red; */
 
-    height: 390px;
-    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
 
     border-bottom: var(--white) solid 0.5px;
 
@@ -178,8 +236,11 @@ DIV
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
-    width: 100%;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 2em;
+    padding-left: 2em;
 
     background-image: url(./img/anna-demianenko-12397-unsplash.jpg);
     background-repeat: no-repeat;
@@ -200,28 +261,71 @@ DIV
     display: flex;
     justify-content: center;
     align-items: center;
-
-    height: 390px;
-    width: 100%;
+    
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
     /* justify-content: center;
     align-items: center; */
-
+    
     /* border-bottom: var(--white) solid 0.5px; */
-
+    
 	grid-area: d
 }
 
 .contact-container {
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     align-items: stretch;
 
-    height: 300px;
+    height: auto;
     width: 100%;
 
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .contactbox {
-    border: green solid 1px;
+    /* border: green solid 1px; */
+    flex-grow: 3;
 }
+
+.e {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+    border-bottom: var(--white) solid 0.5px;
+    
+	grid-area: e
+}
+
+.invo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+    /* padding-top: 50px;
+    padding-bottom: 50px; */
+
+    /* border: 1px solid red; */
+}
+
+.invobox {
+    /* border: green solid 1px; */
+    flex-grow: 3;
+
+    text-align: center;
+}
+
+.invobox p {
+    text-align: initial;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+
+
+
