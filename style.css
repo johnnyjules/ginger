@@ -8,6 +8,7 @@
     - P, H1, H2, H3, H4, H5, H6
     - IMG
     - SVG
+    - FORM
     - GRID
     - VARIABLES
     - DIV
@@ -54,8 +55,8 @@ CSS CUSTOM PROPS / VARIABLES
     --ff-ss-size: 1.2em;
 
     /* CONTENT PADDING */
-    --pad-top: 50px;
-    --pad-but: 50px;
+    --pad-top: 30px;
+    --pad-but: 30px;
 
 }
 
@@ -101,7 +102,8 @@ P, H1, H2, H3, H4, H5, H6
 p {
     font-family: madraslight;
     font-size: var(--ff-ss-size);
-    letter-spacing: 0.1em;
+    letter-spacing: 0.154em;
+    line-height: 1.3;
 
     color: var(--white);
 }
@@ -110,6 +112,7 @@ h1 {
     font-family: madrasBoldItalic;
     font-size: var(--ff-size);
     letter-spacing: 0.472em;
+    line-height: 1.3;
 
     color: var(--white);
 }
@@ -118,6 +121,7 @@ h2 {
     font-family: madrasBoldItalic;
     font-size: var(--ff-size-h2);
     letter-spacing: 0.29em;
+    line-height: 1.3;
 
     color: var(--white);
 }
@@ -126,6 +130,7 @@ h3 {
     font-family: madrasBoldItalic;
     font-size: var(--ff-size);
     letter-spacing: 0.472em;
+    line-height: 1.3;
 
     color: var(--white);
 }
@@ -146,7 +151,7 @@ SVG
 }
 
 .avedalogo {
-    width: 50%;
+    width: 30%;
 }
 
 .avedalogo .a {
@@ -162,6 +167,14 @@ SVG
 }
 
 /*--------------------------------------------------
+SVG
+--------------------------------------------------*/
+
+form {
+    
+}
+
+/*--------------------------------------------------
 GRID
 --------------------------------------------------*/
 
@@ -173,13 +186,15 @@ GRID
 	grid-gap: 0px;
 
     grid-template-columns: auto 700px auto;
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto auto;
 
 	grid-template-areas:
 		". a ." /* LOGO */    
         ". b ." /* INFO TEXT */    
+        ". c ." /* PIC BOX */
         ". e ." /* INVO BOX */
-        ". c ." /* AVEDA BOX */
+        ". g ." /* AVEDA CONTAINER */
+        ". f ." /* FORM */
         ". d ." /* KONTAKT */;
 }
 /*--------------------------------------------------
@@ -225,6 +240,12 @@ DIV
 	grid-area: b
 }
 
+.b p {
+    text-align: initial;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
 .c {
     display: flex;
     justify-content: center;
@@ -245,6 +266,9 @@ DIV
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    height: 300px;
+    width: 100%;
 
     padding-top: var(--pad-top);
     padding-bottom: var(--pad-but);
@@ -316,10 +340,6 @@ DIV
     justify-content: space-between;
     align-items: stretch;
 
-    /* padding-top: 50px;
-    padding-bottom: 50px; */
-
-    /* border: 1px solid red; */
 }
 
 .invobox {
@@ -333,6 +353,45 @@ DIV
     text-align: initial;
     padding-left: 1em;
     padding-right: 1em;
+}
+
+.f {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding-top: var(--pad-top);
+    padding-bottom: var(--pad-but);
+
+    border-bottom: var(--white) solid 0.5px;
+
+    grid-area: f;
+
+}
+
+.form-container {
+
+}
+
+.g {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding-top: var(--pad-top);
+    padding-bottom: var(--pad-but);
+
+    border-bottom: var(--white) solid 0.5px;
+
+    grid-area: g;
+}
+
+.g p {
+    text-align: initial;
+    padding-left: 1em;
+    padding-right: 1em;
+
+    font-style: italic;
 }
 
 
