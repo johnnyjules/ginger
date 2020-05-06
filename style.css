@@ -34,6 +34,7 @@ CSS CUSTOM PROPS / VARIABLES
 
 :root {
 
+    /* COLOURS */
     --gold: #DAA520;
     --black: #18181A;
     --white: #F7F7F7;
@@ -51,6 +52,11 @@ CSS CUSTOM PROPS / VARIABLES
     /* P */
     --ff-ss: 'MadrasExtraLight';
     --ff-ss-size: 1.2em;
+
+    /* CONTENT PADDING */
+    --pad-top: 50px;
+    --pad-but: 50px;
+
 }
 
 /*--------------------------------------------------
@@ -77,6 +83,8 @@ ALL
 * {
 	margin: 0;
     padding: 0;
+
+    box-sizing: border-box; /* INCLUDES THE BORDER INTO THE ELEMENT INSTEAD OF ADDING */
 }
 
 /*--------------------------------------------------
@@ -168,11 +176,11 @@ GRID
     grid-template-rows: auto auto auto auto auto;
 
 	grid-template-areas:
-		". a ." /*LOGO*/    
-        ". b ."     
-        ". e ."
-        ". c ."
-        ". d .";
+		". a ." /* LOGO */    
+        ". b ." /* INFO TEXT */    
+        ". e ." /* INVO BOX */
+        ". c ." /* AVEDA BOX */
+        ". d ." /* KONTAKT */;
 }
 /*--------------------------------------------------
 HEADER SPAN
@@ -196,8 +204,8 @@ DIV
     justify-content: left;
     align-items: center;
     
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: var(--pad-top);
+    padding-bottom: var(--pad-but);
 
     border-bottom: var(--white) solid 0.5px;
 
@@ -209,8 +217,8 @@ DIV
     justify-content: center;
     align-items: center;
 
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: var(--pad-top);
+    padding-bottom: var(--pad-but);
 
     border-bottom: var(--white) solid 0.5px;
 
@@ -224,8 +232,8 @@ DIV
 
     /* border: solid 1px red; */
 
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: var(--pad-top);
+    padding-bottom: var(--pad-but);
 
     border-bottom: var(--white) solid 0.5px;
 
@@ -237,8 +245,9 @@ DIV
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-top: 50px;
-    padding-bottom: 50px;
+
+    padding-top: var(--pad-top);
+    padding-bottom: var(--pad-but);
     padding-right: 2em;
     padding-left: 2em;
 
@@ -262,8 +271,8 @@ DIV
     justify-content: center;
     align-items: center;
     
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: var(--pad-top);
+    padding-bottom: var(--pad-but);
     
     /* justify-content: center;
     align-items: center; */
@@ -294,8 +303,8 @@ DIV
     justify-content: center;
     align-items: center;
     
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: var(--pad-top);
+    padding-bottom: var(--pad-but);
     
     border-bottom: var(--white) solid 0.5px;
     
