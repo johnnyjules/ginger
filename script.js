@@ -104,6 +104,8 @@ for (i = 0; i < closebtns.length; i++) {
         {elementType: "labels.text.fill", stylers: [{color: '#18181A'}]},
         {elementType: "labels.text.stroke", stylers: [{color: '#d1a740'}]},
 
+        {featureType: "transit.line", stylers: [{color: '#fffeff'}]},
+
         {
           featureType: 'water',
           elementType: 'labels.text.stroke',
