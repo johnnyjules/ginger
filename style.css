@@ -160,36 +160,43 @@ SVG
     
     fill: var(--gold);
 
-    padding-bottom: 1em;
+    padding-bottom: var(--pad-but);
 }
 
 /*--------------------------------------------------
 FORM
 --------------------------------------------------*/
 
-form {
-    
-}
-
-input, select, textarea {
+input, textarea {
+    font-family: var(--ff-ss-size);
+    font-size: 1em;
     width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    margin-bottom: 12px;
+    border: 1px solid var(--white);
+    border-radius: 2px;
     box-sizing: border-box;
     resize: vertical;
 }
 
+textarea {
+    font-family: var(--ff-ss-size);
+    font-size: 1em;
+}
+
 .submit {
-    background-color: var(--white);
+    font-family: var(--ff);
+    font-size: 1em;
+    
+    background-color: var(--gold);
     color: var(--black);
-    padding: 2px 20px;
-    border: none;
-    border-radius: 4px;
+    padding:10px 20px;
+    box-sizing: border-box;
+    border: 1px solid var(--gold);
+    border-radius: 2px;
     cursor: pointer;
     float: left;
-
-    font-size: 1.1em;
+    width: 100%;
   }
 
 /*--------------------------------------------------
@@ -204,7 +211,7 @@ GRID
 	grid-gap: 0px;
 
     grid-template-columns: auto 700px auto;
-    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto auto auto;
 
 	grid-template-areas:
 		". a ." /* LOGO */    
@@ -213,6 +220,7 @@ GRID
         ". e ." /* INVO BOX */
         ". g ." /* AVEDA CONTAINER */
         ". f ." /* FORM */
+        ". h ." /* MAPS */
         ". d ." /* KONTAKT */;
 }
 /*--------------------------------------------------
@@ -273,6 +281,8 @@ DIV
 
     padding-top: var(--pad-top);
     padding-bottom: var(--pad-but);
+    padding-right: 1em;
+    padding-left: 1em;
 
     border-bottom: var(--white) solid 0.5px;
 
@@ -290,8 +300,7 @@ DIV
 
     padding-top: var(--pad-top);
     padding-bottom: var(--pad-but);
-    padding-right: 2em;
-    padding-left: 2em;
+    
 
     background-image: url(./img/anna-demianenko-12397-unsplash.jpg);
     background-repeat: no-repeat;
@@ -387,18 +396,11 @@ DIV
 
 }
 
-.form-container {
-
-}
-
-.textarea {
-    
-}
-
 .g {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     
     padding-top: var(--pad-top);
     padding-bottom: var(--pad-but);
@@ -413,7 +415,7 @@ DIV
     margin: auto;
 }
 
-.g p {
+.g .quote {
     text-align: initial;
 
     font-style: italic;
@@ -434,3 +436,57 @@ DIV
     color: var(--gold);
 }
 
+.avedapic-container {
+    display: flex;
+    justify-content: center;
+
+    padding-bottom: var(--pad-but);
+}
+
+.avedapic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    margin-left: 1em;
+    margin-right: 1em;
+
+    width: 100%;
+    background-color: var(--gold);;
+
+    box-shadow: inset 0 0 90px #000000;
+}
+
+.avedapic img {
+    width: 50%;
+    padding-top: var(--pad-top);
+    transition: transform 1s, filter 1s ease-in-out;
+    filter: brightness(50%);
+}
+
+.avedapic:hover img {
+    transform: scale(1.2);
+    filter: brightness(100%);
+  }
+
+.h {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    padding-top: var(--pad-top);
+    padding-bottom: var(--pad-but);
+    padding-right: 1em;
+    padding-left: 1em;
+
+    border-bottom: var(--white) solid 0.5px;
+
+    grid-area: h;
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+}

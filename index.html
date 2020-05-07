@@ -224,7 +224,7 @@
                         <label>Nachricht: <textarea name="message"></textarea></label>
                     </p>
                     <p>
-                        <button type="submit" class="submit">Send</button>
+                        <button type="submit" class="submit">Senden</button>
                     </p>
                 </form>
 
@@ -233,6 +233,7 @@
 
         <div class="g">
             <div class="aveda-container">
+
                 <svg class="avedalogo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20.54">
                     <defs>
                         <style>
@@ -249,6 +250,22 @@
                         d="M10.81 13.12A2 2 0 0 0 8.7 15a2 2 0 0 0 2.11 1.93A2 2 0 0 0 12.92 15a2 2 0 0 0-2.11-1.88zM66.23.93h-5.64v18.53h5.64c7.94 0 11.46-3.59 11.46-9.16S74.46.93 66.23.93zm.19 15.76h-2.2V3.7h2.19c5.87 0 8.07 2.56 8.07 6.6s-2.34 6.38-8.07 6.38z" />
                 </svg>
                 <br>
+                <p>Wir arbeiten auschliesslich mit Aveda Produkten</p>
+                <br>
+                <div class="avedapic-container">
+                    <div class="avedapic">
+                        <img src="./img/aveda-botanical-kinetics-deep-cleansing-clay-masque-125ml.png">
+                    </div>
+
+                    <div class="avedapic">
+                        <img src="./img/aveda-invati-men-scalp-revitalizer-125ml.png">
+                    </div>
+
+                    <div class="avedapic">
+                        <img src="./img/aveda-pramasana-purifying-scalp-cleanser-150ml.png">
+                    </div>
+
+                </div>
                 <p class="quote">
                     AVEDA HAT ES SICH ZUM ZIEL GESETZT, SORGSAM UND RESPEKTVOLL MIT DER UMWELT UMZUGEHEN. DIESE
                     PHILOSOPHIE KOMMT SOWOHL IN UNSEREN PRODUKTEN ALS AUCH IN UNSEREM BEMÜHEN UM DAS WOHLERGEHEN DER
@@ -259,8 +276,14 @@
 
         </div>
 
-        <script src="./script.js"></script>
+        <div class="h">
+            <div id="map"></div>
+        </div>
 
+        <script src="./script.js"></script>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIBOGFhNx9pYyNkHwoiu0JkG_LNEX37nE&callback=initMap">
+            </script>
 </body>
 
 </html>
