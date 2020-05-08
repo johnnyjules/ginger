@@ -54,9 +54,13 @@ CSS CUSTOM PROPS / VARIABLES
     --ff-ss: 'MadrasExtraLight';
     --ff-ss-size: 1em;
 
-    /* CONTENT PADDING */
-    --pad-top: 30px;
-    --pad-but: 30px;
+    /* CONTENT PADDING TOP/BUT */
+    --pad-top: 2em;
+    --pad-but: 2em;
+
+    /* CONTENT PADDING LEFT/RIGHT */
+    --pad-left: 1em;
+    --pad-right: 1em;
 
 }
 
@@ -174,7 +178,7 @@ input, textarea {
     padding: 12px;
     margin-bottom: 12px;
     border: 1px solid var(--white);
-    border-radius: 2px;
+    border-radius: 0px;
     box-sizing: border-box;
     resize: vertical;
 }
@@ -182,6 +186,7 @@ input, textarea {
 textarea {
     font-family: var(--ff-ss-size);
     font-size: 1em;
+    height: 9em;
 }
 
 .submit {
@@ -193,7 +198,7 @@ textarea {
     padding:10px 20px;
     box-sizing: border-box;
     border: 1px solid var(--gold);
-    border-radius: 2px;
+    border-radius: 0px;
     cursor: pointer;
     float: left;
     width: 100%;
@@ -268,8 +273,8 @@ DIV
 
 .b p {
     text-align: initial;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-left: var(--pad-left);
+    padding-right: var(--pad-right);
 }
 
 .c {
@@ -281,8 +286,8 @@ DIV
 
     padding-top: var(--pad-top);
     padding-bottom: var(--pad-but);
-    padding-right: 1em;
-    padding-left: 1em;
+    padding-left: var(--pad-left);
+    padding-right: var(--pad-right);
 
     border-bottom: var(--white) solid 0.5px;
 
@@ -378,8 +383,8 @@ DIV
 
 .invobox p {
     text-align: initial;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-left: var(--pad-left);
+    padding-right: var(--pad-right);
 }
 
 .f {
@@ -394,6 +399,31 @@ DIV
 
     grid-area: f;
 
+}
+
+.form-container {
+    width: 100%;
+
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.form-left {
+    flex-direction: column;
+    width: 100%;
+    padding-right: var(--pad-right);
+}
+
+.form-right {
+    flex-direction: column;
+    padding-left: var(--pad-left);
+    width: 100%;
 }
 
 .g {
@@ -420,8 +450,8 @@ DIV
 
     font-style: italic;
 
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-left: var(--pad-left);
+    padding-right: var(--pad-right);
 }
 
 .g .quote::before {
@@ -478,8 +508,8 @@ DIV
     
     padding-top: var(--pad-top);
     padding-bottom: var(--pad-but);
-    padding-right: 1em;
-    padding-left: 1em;
+    padding-left: var(--pad-left);
+    padding-right: var(--pad-right);
 
     border-bottom: var(--white) solid 0.5px;
 
