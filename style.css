@@ -136,6 +136,25 @@ h3 {
     color: var(--white);
 }
 
+hr { 
+    display: block;
+    width: 90%; 
+
+    margin-top: var(--pad-top);
+    
+    margin-before: 0.5em; 
+    margin-after: 0.5em;
+    margin-start: auto; 
+    margin-end: auto; 
+    overflow: hidden; 
+    border-style: solid; 
+    border-width: 0.5px;
+    border-bottom: var(--alarm);
+
+    /* width: 50%; margin: auto; margin-top: 5%; margin-bottom: 5%; transform: rotate(10deg); border-color: purple; */
+    /* border-color: var(--white); */
+}
+
 /*--------------------------------------------------
 IMG
 --------------------------------------------------*/
