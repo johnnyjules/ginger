@@ -13,7 +13,7 @@ for (i = 0; i < closebtns.length; i++) {
   function initMap() {
     var location = {lat: 47.498700, lng: 8.727290};
     var map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 16,
+      zoom: 15,
       center: location,
       mapTypeId: 'roadmap',
       // HIER BEGINNEN CUSTOM STYLES
