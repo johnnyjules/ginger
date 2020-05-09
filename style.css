@@ -521,6 +521,16 @@ form {
     width: 100%;
 }
 
+.i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    grid-area: i;
+
+}
+
 /*--------------------------------------------------
 MEDIA QUERY
 --------------------------------------------------*/
