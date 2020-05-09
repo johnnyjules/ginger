@@ -63,7 +63,7 @@ CSS CUSTOM PROPS / VARIABLES
     --pad-right: 1em;
 
     /* GRID BORDER HELP */
-    --gridhelp: 1px;
+    --gridhelp: 0px;
 }
 
 /*--------------------------------------------------
@@ -553,7 +553,6 @@ form {
     width: 100%;
     border: green solid var(--gridhelp);
     grid-area: i;
-
 }
 
 /*--------------------------------------------------
