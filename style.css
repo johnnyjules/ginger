@@ -219,7 +219,8 @@ GRID
     grid-template-rows: auto auto auto auto auto auto auto auto;
 
 	grid-template-areas:
-		". a ." /* LOGO */    
+        ". a ." /* LOGO */    
+        ". i ." /* HR */
         ". b ." /* INFO TEXT */    
         ". c ." /* PIC BOX */
         ". e ." /* INVO BOX */
@@ -526,6 +527,8 @@ form {
     justify-content: center;
     align-items: center;
 
+    height: 5px;
+    width: 100%;
 
     grid-area: i;
 
