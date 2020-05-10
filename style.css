@@ -1,4 +1,6 @@
-/* Boilerplate 2020 by Oliver Peter 🐕
+/*=================================================
+Boilerplate 2020 by Oliver Peter 🐕
+===================================================
 
     - IMPORTS
     - CSS CUSTOM PROPS / VARIABLES
@@ -12,8 +14,8 @@
     - GRID
     - VARIABLES
     - DIV
-    
-This CSS kills Faschists 🖖🏻 */
+
+===================================================*/
 
 /*--------------------------------------------------
 IMPORTS
@@ -54,6 +56,9 @@ CSS CUSTOM PROPS / VARIABLES
     --ff-ss: 'MadrasExtraLight';
     --ff-ss-size: 1em;
 
+    /* HR */
+    --hr-wid: 80%;
+
     /* CONTENT PADDING TOP/BUT */
     --pad-top: 2em;
     --pad-but: 2em;
@@ -85,9 +90,9 @@ CLOSE
     transform: translate(0%, 0%); */
   }
   
-.close:hover {
+/* .close:hover {
     
-    }
+    } */
 
 /*--------------------------------------------------
 ALL
@@ -149,13 +154,52 @@ h3 {
 HR
 --------------------------------------------------*/
 
-.line { 
+.line1 { 
     border: none;
     height: 1px;
+    width: var(--hr-wid);
+    justify-self: center;
     background: var(--alarm);
-    width: 70%;
-    margin-top: var(--mar-top);
+    grid-area: z1; 
 }
+
+.line2 { 
+    border: none;
+    height: 1px;
+    width: var(--hr-wid);
+    justify-self: center;
+    background: var(--alarm);
+    grid-area: z2; 
+}
+
+.line3 { 
+    border: none;
+    height: 1px;
+    width: var(--hr-wid);
+    justify-self: center;
+    background: var(--alarm);
+    grid-area: z3; 
+}
+
+.line4 { 
+    border: none;
+    height: 1px;
+    width: var(--hr-wid);
+    justify-self: center;
+    background: var(--alarm);
+    grid-area: z4; 
+}
+
+.line5 { 
+    border: none;
+    height: 1px;
+    width: var(--hr-wid);
+    justify-self: center;
+    background: var(--alarm);
+    grid-area: z5; 
+}
+
+
 
 /*--------------------------------------------------
 IMG
@@ -238,16 +282,21 @@ GRID
 	grid-gap: 0px;
 
     grid-template-columns: auto 700px auto;
-    grid-template-rows: auto auto auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto;
 
-	grid-template-areas:
-		". a ." /* LOGO */    
-        ". b ." /* INFO TEXT */    
+    grid-template-areas:
+        ". a ." /* LOGO */ 
+        ". b ." /* INFO TEXT */
         ". c ." /* PIC BOX */
+        ". z1 ."   
         ". e ." /* INVO BOX */
+        ". z2 ."
         ". g ." /* AVEDA CONTAINER */
+        ". z3 ."
         ". f ." /* FORM */
+        ". z4 ."
         ". h ." /* MAPS */
+        ". z5 ."
         ". d ." /* KONTAKT */;
 }
 /*--------------------------------------------------
@@ -286,11 +335,7 @@ DIV
     align-items: center;
 
     padding-top: var(--pad-top);
-    /* padding-bottom: var(--pad-but); */
-
-    /* border-bottom: var(--white) solid 0.5px; */
-
-    /* border: 1px solid green; */
+    padding-bottom: var(--pad-but);
 
 	grid-area: b
 }
@@ -306,14 +351,10 @@ DIV
     justify-content: center;
     align-items: center;
 
-    /* border: solid 1px red; */
-
     padding-top: var(--pad-top);
     padding-bottom: var(--pad-but);
     padding-left: var(--pad-left);
     padding-right: var(--pad-right);
-
-    border-bottom: var(--white) solid 0.5px;
 
 	grid-area: c
 }
@@ -353,12 +394,7 @@ DIV
     
     padding-top: var(--pad-top);
     padding-bottom: var(--pad-but);
-    
-    /* justify-content: center;
-    align-items: center; */
-    
-    /* border-bottom: var(--white) solid 0.5px; */
-    
+
 	grid-area: d
 }
 
@@ -385,8 +421,6 @@ DIV
     
     padding-top: var(--pad-top);
     padding-bottom: var(--pad-but);
-    
-    border-bottom: var(--white) solid 0.5px;
     
 	grid-area: e
 }
@@ -417,8 +451,6 @@ DIV
     
     padding-top: var(--pad-top);
     padding-bottom: var(--pad-but);
-
-    border-bottom: var(--white) solid 0.5px;
 
     grid-area: f;
 
@@ -457,8 +489,6 @@ form {
     
     padding-top: var(--pad-top);
     padding-bottom: var(--pad-but);
-
-    border-bottom: var(--white) solid 0.5px;
 
     grid-area: g;
 }
@@ -535,8 +565,6 @@ form {
     padding-bottom: var(--pad-but);
     padding-left: var(--pad-left);
     padding-right: var(--pad-right);
-
-    border-bottom: var(--white) solid 0.5px;
 
     grid-area: h;
 }
