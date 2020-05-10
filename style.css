@@ -62,6 +62,14 @@ CSS CUSTOM PROPS / VARIABLES
     --pad-left: 1em;
     --pad-right: 1em;
 
+    /* CONTENT MARGING TOP/BUT */
+    --mar-top: 2em;
+    --mar-but: 2em;
+
+    /* CONTENT MARGIN LEFT/RIGHT */
+    --mar-left: 1em;
+    --mar-right: 1em;
+
 }
 
 /*--------------------------------------------------
@@ -103,6 +111,7 @@ body {
 /*--------------------------------------------------
 P, H1, H2, H3, H4, H5, H6
 --------------------------------------------------*/
+
 p {
     font-family: madraslight;
     font-size: var(--ff-ss-size);
@@ -140,23 +149,12 @@ h3 {
 HR
 --------------------------------------------------*/
 
-hr { 
-    display: block;
-    width: 90%; 
-
-    margin-top: var(--pad-top);
-    
-    margin-before: 0.5em; 
-    margin-after: 0.5em;
-    margin-start: auto; 
-    margin-end: auto; 
-    overflow: hidden; 
-    border-style: solid; 
-    border-width: 0.5px;
-    border-bottom: var(--alarm);
-
-    /* width: 50%; margin: auto; margin-top: 5%; margin-bottom: 5%; transform: rotate(10deg); border-color: purple; */
-    /* border-color: var(--white); */
+.line { 
+    border: none;
+    height: 1px;
+    background: var(--alarm);
+    width: 70%;
+    margin-top: var(--mar-top);
 }
 
 /*--------------------------------------------------
@@ -288,7 +286,7 @@ DIV
     align-items: center;
 
     padding-top: var(--pad-top);
-    padding-bottom: var(--pad-but);
+    /* padding-bottom: var(--pad-but); */
 
     /* border-bottom: var(--white) solid 0.5px; */
 
